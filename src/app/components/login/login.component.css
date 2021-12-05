@@ -1,0 +1,25 @@
+
+.bg{
+    background-image: url(../../../assets/images/Background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100;
+}
+
+.cont-lgn{
+    margin-top: 8rem;
+    padding-left:  -calc(var(--bs-gutter-x) * 0.5);
+    
+}
+
+@media (max-width: 500) {
+    .bg {
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100;
+    }
+}
+
+.container {
+    background-color: rgb(176, 224, 230);
+}

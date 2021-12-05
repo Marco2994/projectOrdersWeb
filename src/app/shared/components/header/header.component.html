@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand lnk ps-2 fs-5" [routerLink]="['../home']" >Home</a>
+    <a class="navbar-brand lnk ps-2 fs-7" [routerLink]="['../oServicio']" routerLinkActive="active" >Orden Servicio</a>
+    <a class="navbar-brand lnk ps-2 fs-7" [routerLink]="['../oCompra']" routerLinkActive="active" >Orden Compra</a>
+    <div class="collapse navbar-collapse d-flex justify-content-end p-2" id="navbarSupportedContent">
+        <button class="btn btn-danger" type="submit"> 
+          <a [routerLink]="['../']" class="text-white">Salir <i class="fas fa-sign-out-alt"></i>  </a> 
+        </button>
+    </div>
+  </div>
+</nav>

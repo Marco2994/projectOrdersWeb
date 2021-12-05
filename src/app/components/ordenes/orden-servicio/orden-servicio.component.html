@@ -1,0 +1,340 @@
+
+<app-header></app-header>
+
+<div class="container">
+    <h2 class="text-center p-3"> Orden de Servicio </h2>
+
+    <div class="row mb-3">
+
+        <div class="col d-flex justify-content-end  col-md-10 offset-md-1">
+            <button class="btn btn-outline-success me-2 "  data-bs-toggle="modal" data-bs-target="#newServicio"> 
+                Nuevo <i class="fas fa-plus"></i>
+            </button>
+        </div>
+        
+    </div>
+    
+    <div class="row justify-content-md-center col-md-10 offset-md-1">
+        <table class="table table-striped">
+            <thead class="table" >
+            <tr class="text-center tbl-one">
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Servicio</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Importe</th>
+                <th scope="col">Acción</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-center">
+                <td>1</td>
+                <td>123123</td>
+                <td>Revisar Ordenadores</td>
+                <td>America Movil</td>
+                <td>$800</td>
+                <td>
+                    <button class="btn btn-outline-primary me-2" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#editServicio"> 
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-outline-danger me-2" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#deleteServicio"> 
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td>2</td>
+                <td>123124</td>
+                <td>Revisar Antivirus</td>
+                <td>Intercorp Retail</td>
+                <td>$200</td>
+                <td>
+                    <button class="btn btn-outline-primary me-2" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#editServicio"> 
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-outline-danger me-2" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#deleteServicio"> 
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table> 
+
+    </div>
+</div>
+
+<!-- Eliminar Modal-->
+<div class="modal fade" id="deleteCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title"> ¿Esta seguro de eliminar el reigstro?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- Editar Modal-->
+<div class="modal fade" id="editServicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title"> Orden de Servicio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">ID</label>
+                    </div>
+                    <div class="col-9">
+                      <input type="text" 
+                            id="inputPassword6" 
+                            class="form-control" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="1221312"
+                            disabled>
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Servicio</label>
+                    </div>
+                    <div class="col-9">
+                      <input type="text" 
+                            id="inputPassword6" 
+                            class="form-control" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="Revision de Articulos"
+                            >
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Tipo Servicio</label>
+                    </div>
+                    <div class="col-9">
+                      <input type="text" 
+                            id="inputPassword6" 
+                            class="form-control" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="Tipo Servicio...." disabled
+                            >
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Cliente</label>
+                    </div>
+                    <div class="col-9">
+                      <input type="text" 
+                            id="inputPassword6" 
+                            class="form-control" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="America Movil...." disabled
+                            >
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label  class="col-form-label">Estado</label>
+                    </div>
+                    <div class="col-9">
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Seleccionar un estado...</option>
+                            <option value="1">Activo</option>
+                            <option value="2">Anulado</option>
+                            <option value="2">Cerrado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Importe Total</label>
+                    </div>
+                    <div class="row col-3 mt-2 ms-1 ps-1">
+                    <span class="input-group-text col-1">$</span>
+                      <input type="number" 
+                            id="inputPassword6" 
+                            class="form-control col" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="100" disabled>
+                    </div>
+
+                    <div class="col-2 ms-2">
+                        <label class="col-form-label">Descuento</label>
+                      </div>
+                      <div class="row col-4 mt-2 ms-1 ps-1">
+                      <span class="input-group-text col-2 p-1">%</span>
+                        <input type="number" 
+                              id="inputPassword6" 
+                              class="form-control col" 
+                              aria-describedby="passwordHelpInline" 
+                              placeholder="0">
+                      </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Importe a Pagar</label>
+                    </div>
+                    <div class="row col-9 mt-2 ms-1 ps-1">
+                    <span class="input-group-text col-1">$</span>
+                      <input type="number" 
+                            id="inputPassword6" 
+                            class="form-control col" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="100" disabled>
+                    </div>
+                </div>
+            </form>
+          </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- Eliminar Modal-->
+<div class="modal fade" id="deleteServicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title"> ¿Esta seguro de eliminar el registro?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Modal-->
+
+<div class="modal fade" id="newServicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title"> Orden de Servicio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Servicio</label>
+                    </div>
+                    <div class="col-9">
+                      <input type="text" 
+                            id="inputPassword6" 
+                            class="form-control" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="Revision de Articulos"
+                            >
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Tipo Servicio</label>
+                    </div>
+                    <div class="col-9">
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Seleccionar un tipo servicio...</option>
+                            <option value="1">Monitores</option>
+                            <option value="2">Tarjeta Grafica</option>
+                            <option value="3">CPU's</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 " disabled>
+                    <div class="col-2 ms-2">
+                      <label  class="col-form-label">Cliente</label>
+                    </div>
+                    <div class="col-9" disabled>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Seleccionar un cliente...</option>
+                            <option value="1">America Movil</option>
+                            <option value="2">Intercorp</option>
+                            <option value="3">Entel Peru</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label  class="col-form-label">Estado</label>
+                    </div>
+                    <div class="col-9">
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Seleccionar un estado...</option>
+                            <option value="1">Activo</option>
+                            <option value="2">Anulado</option>
+                            <option value="2">Cerrado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Importe Bruto</label>
+                    </div>
+                    <div class="row col-3 mt-2 ms-1 ps-1">
+                    <span class="input-group-text col-1">$</span>
+                      <input type="number" 
+                            id="inputPassword6" 
+                            class="form-control col" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="100">
+                    </div>
+
+                    <div class="col-2 ms-2">
+                        <label class="col-form-label">Descuento</label>
+                      </div>
+                      <div class="row col-4 mt-2 ms-1 ps-1">
+                      <span class="input-group-text col-2 p-1">%</span>
+                        <input type="number" 
+                              id="inputPassword6" 
+                              class="form-control col" 
+                              aria-describedby="passwordHelpInline" 
+                              placeholder="0">
+                      </div>
+                </div>
+                <div class="row g-3 align-items-center mb-3 ">
+                    <div class="col-2 ms-2">
+                      <label class="col-form-label">Importe a Pagar</label>
+                    </div>
+                    <div class="row col-9 mt-2 ms-1 ps-1">
+                    <span class="input-group-text col-1">$</span>
+                      <input type="number" 
+                            id="inputPassword6" 
+                            class="form-control col" 
+                            aria-describedby="passwordHelpInline" 
+                            placeholder="100" disabled>
+                    </div>
+                </div>
+            </form>
+          </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+        </div>
+    </div>
+</div>
